@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <!-- Bulma -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body::before {
+        font-family:
+          "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+          "Droid Sans Mono", monospace, monospace;
+        white-space: pre;
+        display: block;
+        padding: 1em;
+        margin-bottom: 1em;
+        border-bottom: 2px solid black;
+        /* content: 'Error: Can\'t find stylesheet to import.\a    \2577 \a 11 \2502  @use "bulma";\a    \2502  ^^^^^^^^^^^^\a    \2575 \a   scss/main.scss 11:1  root stylesheet'; */
+      }
+
+      /* === GLOBAL === */
+      body {
+        background: #edf3f0;
+        font-family: "DM Sans", sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* === NAVBAR === */
+      .custom-nav {
+        background: #edf3f0;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .logo {
+        font-weight: 700;
+        font-size: 20px;
+        color: #444;
+      }
+
+      .fancy {
+        color: #28885f;
+      }
+
+      /* === HERO === */
+      .hero-section {
+        min-height: 100vh;
+        padding-top: 120px;
+      }
+
+      .badge {
+        background: #d7e6dd;
+        color: #28885f;
+        padding: 12px 16px;
+        border-radius: 12px;
+        text-transform: uppercase;
+        display: inline-block;
+      }
+
+      .h2 {
+        font-family: "DM Serif Display", serif;
+      }
+
+      .fancy-btn {
+        margin-top: 30px;
+        background: #28885f;
+        color: white;
+        border-radius: 12px;
+        padding: 14px 26px;
+      }
+
+      .fancy-btn:hover {
+        background: #1f6e4d;
+      }
+
+      /* === HERO IMAGES === */
+      .hero-images {
+        position: relative;
+        height: 500px;
+      }
+
+      .hero-images img {
+        position: absolute;
+        border-radius: 20px;
+        border: 4px solid white;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      .img1 {
+        top: 0;
+        left: 0;
+        width: 220px;
+        transform: rotate(-6deg);
+      }
+
+      .img2 {
+        top: 100px;
+        right: 0;
+        width: 300px;
+        transform: rotate(4deg);
+      }
+
+      .img3 {
+        bottom: 0;
+        left: 100px;
+        width: 260px;
+        transform: rotate(-3deg);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+      }
+
+      section {
+        scroll-snap-align: start;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+
+      /* NAVBAR */
+      .navbar {
+        background: #edf3f0;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .navbar-item {
+        font-weight: 500;
+        font-size: 17px;
+      }
+
+      /* HERO */
+
+      .badge {
+        background: #d7e6dd;
+        color: #28885f;
+        padding: 12px 16px;
+        border-radius: 12px;
+        text-transform: uppercase;
+        display: inline-block;
+        font-size: 14px;
+        letter-spacing: 2px;
+      }
+
+      .h3 {
+        text-transform: uppercase;
+        color: #28885f;
+        letter-spacing: 2px;
+        font-size: 16px;
+      }
+
+      .hero-title {
+        font-family: "DM Serif Display", serif;
+        font-size: 55px;
+        margin-top: 20px;
+        line-height: 1.1;
+      }
+
+      .fancy {
+        color: #28885f;
+      }
+
+      .sektion {
+        background-color: #d7e6dd;
+        height: 100%;
+      }
+
+      .skills {
+        background-color: #edf3f0;
+        border-radius: 10px;
+        font-size: 14px;
+        padding: 8px 14px;
+        margin: 5px;
+        width: fit-content;
+        display: inline-block;
+      }
+
+      .hero-text {
+        margin-top: 24px;
+        font-size: 18px;
+        color: #000000;
+      }
+
+      .fancy-btn {
+        margin-top: 30px;
+        background: #28885f;
+        color: white;
+        border-radius: 12px;
+        padding: 14px 26px;
+        border: none;
+      }
+
+      .fancy-btn:hover {
+        background: #1f6e4d;
+        color: white;
+      }
+
+      /* HERO IMAGES */
+      .hero-images {
+        position: relative;
+        height: 500px;
+      }
+
+      .hero-images img {
+        position: absolute;
+        border-radius: 20px;
+        border: 4px solid white;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      .img1 {
+        top: 0;
+        left: 0;
+        width: 220px;
+        transform: rotate(-6deg);
+      }
+
+      .img2 {
+        top: 100px;
+        right: 0;
+        width: 300px;
+        transform: rotate(4deg);
+      }
+
+      .img3 {
+        bottom: 0;
+        left: 100px;
+        width: 260px;
+        transform: rotate(-3deg);
+      }
+
+      /* OM MIG */
+      .custom-box {
+        background: white;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+        width: 37%;
+      }
+
+      .profile-img {
+        border-radius: 20px;
+        border: 4px solid white;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        min-width: 250px;
+        max-height: 250px;
+      }
+      .custom-wrapper {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .custom-wrapper .custom-box {
+        flex: 1;
+        max-width: 250px;
+      }
+
+      .padding {
+        padding: 20px;
+      }
+
+      /* PROJEKTER */
+      .subtitle-costume {
+        padding-bottom: 50px;
+        padding-top: 20px;
+      }
+      .card {
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      }
+
+      .p-text {
+        font-size: 13px;
+        color: #000000;
+        padding-right: 20px;
+      }
+      /* KONTAKT */
+      .kontakt {
+        background: #28885f;
+        color: white;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+      }
+
+      .box {
+        width: 60%;
+        height: 200px;
+      }
+
+      .break {
+        width: 80%;
+        color: #000000;
+      }
+
+      .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .project-year {
+        font-size: 12px;
+        color: gray;
+      }
+
+      .navbar-item:hover,
+      .navbar-item:focus {
+        background: transparent !important;
+        color: inherit !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar is-fixed-top">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item has-text-weight-bold" href="#side1">
+            Portfolio<span class="fancy">.</span>
+          </a>
+        </div>
+
+        <div class="navbar-menu">
+          <div class="navbar-end">
+            <a href="#om-mig" class="navbar-item">Om</a>
+            <a href="#projekter" class="navbar-item">Projekter</a>
+            <a href="#kontakt" class="navbar-item">Kontakt</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="side1" class="section hero-section">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-half">
+            <div class="badge">MMD & Webudvikler</div>
+
+            <h1 class="hero-title">
+              Jeg skaber <br />
+              <span class="fancy">digitale</span> oplevelser
+            </h1>
+
+            <p class="hero-text">Her kan du se mine projekter og erfaringer.</p>
+
+            <a href="#projekter" class="button fancy-btn"> Se projekter </a>
+          </div>
+
+          <div class="column is-half">
+            <div class="hero-images">
+              <img src="img/billede3.png" class="img1" />
+              <img src="img/billede2.png" class="img2" />
+              <img src="img/billede1.png" class="img3" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OM MIG -->
+    <section id="om-mig" class="section sektion">
+      <div class="container has-">
+        <div class="columns">
+          <div class="column is-6 is-offset-1">
+            <h2 class="title is-2 h2">
+              Alberte <span class="fancy">Viendahl</span>
+            </h2>
+
+            <img src="img/mig.png" class="profile-img mt-4 mb-5" />
+
+            <p class="break">
+              Jeg blev uddannet multimediedesigner i 2025 og er på nuværende
+              tidspunkt i gang med en top-op i webudvikling. Jeg elsker at
+              kombinere kreativt design med teknisk udvikling for at skabe
+              unikke digitale oplevelser. Min passion ligger i at bygge smukke,
+              brugervenlige hjemmesider og applikationer, der gør en forskel for
+              både brugere og virksomheder.
+            </p>
+          </div>
+
+          <div class="column is-6">
+            <h3 class="title h3">Kompetencer</h3>
+
+            <div class="mb-5">
+              <span class="skills">JavaScript</span>
+              <span class="skills">React</span>
+              <span class="skills">Vue.js</span>
+              <span class="skills">MySQL</span>
+              <span class="skills">Tailwind</span>
+              <br />
+              <span class="skills">Figma</span>
+              <span class="skills">GitHub</span>
+            </div>
+
+            <h3 class="title is-5 fancy">Om mig</h3>
+
+            <div class="custom-wrapper">
+              <div class="custom-box">
+                <strong>Lokation</strong><br />
+                København, Danmark
+              </div>
+
+              <div class="custom-box">
+                <strong>Uddannelse</strong><br />
+                Multimediedesign, KEA<br />
+                Webudvikler, Zealand
+              </div>
+            </div>
+
+            <div class="custom-box">
+              <strong>Arbejde</strong><br />
+              Organic Growth
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJEKTER -->
+    <section id="projekter" class="section">
+      <div class="container">
+        <!-- Header -->
+        <div>
+          <p class="title h3">Udvalgte projekter</p>
+
+          <h2 class="title is-2 h2">Mine projekter</h2>
+
+          <p class="subtitle subtitle-costume is-6">
+            Et udvalg af projekter jeg har arbejdet på de seneste år.
+          </p>
+        </div>
+
+        <!-- Grid -->
+        <div class="columns is-multiline">
+          <!-- PROJECT 1 -->
+          <div class="column is-one-third">
+            <a
+              href="https://forket-ate.vercel.app"
+              target="_blank"
+              class="card is-flex is-flex-direction-column"
+              style="height: 100%"
+            >
+              <div class="card-content sektion">
+                <p class="project-header">
+                  Hjemmeside til enterprise firma
+                  <span class="project-year">2025</span>
+                </p>
+
+                <h3 class="title is-4 mt-2 fancy">Ankjær Enterprise</h3>
+
+                <p class="mb-4">Mit afsluttende eksamensprojekt MMD 2025</p>
+
+                <span class="p-text">React</span>
+                <span class="p-text">Tailwind</span>
+                <span class="p-text">Dobble Diamond</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- PROJECT 2 -->
+          <div class="column is-one-third">
+            <a
+              href="https://rebuildit.netlify.app"
+              target="_blank"
+              class="card is-flex is-flex-direction-column"
+              style="height: 100%"
+            >
+              <div class="card-content sektion">
+                <p class="project-header">
+                  Bæredygtighedsprojekt
+                  <span class="project-year">2025</span>
+                </p>
+
+                <h3 class="title is-4 mt-2 fancy">
+                  App til genbrug af byggematerialer
+                </h3>
+
+                <p class="mb-4">Webshop med søgefunktion og kategorisering.</p>
+
+                <span class="p-text">Vue</span>
+                <span class="p-text">MySQL</span>
+                <span class="p-text">GitHub</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- PROJECT 3 -->
+          <div class="column is-one-third">
+            <a
+              href="https://praktik2025.netlify.app/#section1"
+              target="_blank"
+              class="card is-flex is-flex-direction-column"
+              style="height: 100%"
+            >
+              <div class="card-content sektion">
+                <p class="project-header">
+                  Design & kreativtetsprojekt
+                  <span class="project-year">2024</span>
+                </p>
+
+                <h3 class="title is-4 mt-2 fancy">Portfolio Website 2024</h3>
+
+                <p class="mb-4">En af mine tidligere portfolio-løsninger.</p>
+
+                <span class="p-text">UI/UX</span>
+                <span class="p-text">HTML & CSS</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- KONTAKT -->
+    <section id="kontakt" class="section sektion">
+      <div
+        class="container is-flex is-justify-content-center is-align-items-center"
+      >
+        <div class="box kontakt">
+          <div class="columns is-vcentered">
+            <div class="column">
+              <h2 class="title is-2 has-text-white">Kontakt mig</h2>
+              <p>Lad os skabe noget sammen.</p>
+            </div>
+
+            <div class="column">
+              <ul>
+                <li>Email: aviendahl@hotmail.dk</li>
+                <li>Tlf: 40112020</li>
+                <li>LinkedIn</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

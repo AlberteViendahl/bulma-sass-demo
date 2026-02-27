@@ -1,0 +1,39 @@
+// Change Bulma theme color
+$primary: #1c6c10a1;
+$secondary: #ff0000a1;
+@use "bulma/sass" with (
+  $primary: $primary
+);
+// Your custom style
+.page-title {
+  font-weight: 800;
+}
+
+.button {
+  font-size: 1.5rem;
+}
+
+.card-content {
+  font-size: 1.2rem;
+  background-color: aquamarine;
+}
+
+/* Det her er nesting i SCSS, hvor vi har en nav, og inden i den har vi ul og li. Vi kan style dem på denne måde, så det bliver mere overskueligt og struktureret. */
+nav {
+  ul {
+    display: flex;
+
+    gap: 1rem;
+  }
+  li {
+    list-style: none;
+  }
+}
+
+h1 {
+  color: $primary;
+  display: flex;
+  align-items: center;
+  font-size: xx-large;
+  padding-left: 30px;
+}
