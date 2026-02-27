@@ -73,6 +73,7 @@
 
       .h2 {
         font-family: "DM Serif Display", serif;
+        line-height: 1.1;
       }
 
       .fancy-btn {
@@ -167,6 +168,7 @@
         color: #28885f;
         letter-spacing: 2px;
         font-size: 16px;
+        font-weight: 400;
       }
 
       .hero-title {
@@ -187,12 +189,13 @@
 
       .skills {
         background-color: #edf3f0;
-        border-radius: 10px;
-        font-size: 14px;
+        border-radius: 14px;
+        font-size: 16px;
         padding: 8px 14px;
         margin: 5px;
         width: fit-content;
         display: inline-block;
+        color: #000000;
       }
 
       .hero-text {
@@ -256,7 +259,8 @@
         padding: 15px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
         margin-bottom: 20px;
-        width: 37%;
+        width: fit-content;
+        display: inline-block;
       }
 
       .profile-img {
@@ -330,10 +334,13 @@
         color: gray;
       }
 
-      .navbar-item:hover,
-      .navbar-item:focus {
-        background: transparent !important;
-        color: inherit !important;
+      .navbar-item:hover {
+        color: #28885f !important;
+        background-color: transparent !important;
+      }
+
+      .uoverskift {
+        font-family: "DM Serif Display", serif;
       }
     </style>
   </head>
@@ -407,7 +414,7 @@
             </p>
           </div>
 
-          <div class="column is-6">
+          <div class="column is-5">
             <h3 class="title h3">Kompetencer</h3>
 
             <div class="mb-5">
@@ -418,10 +425,14 @@
               <span class="skills">Tailwind</span>
               <br />
               <span class="skills">Figma</span>
+              <span class="skills">Blender</span>
               <span class="skills">GitHub</span>
+              <span class="skills">Superbase</span>
+              <span class="skills">Nelify</span>
+              <span class="skills">Vercel</span>
             </div>
 
-            <h3 class="title is-5 fancy">Om mig</h3>
+            <h3 class="title h3">Om mig</h3>
 
             <div class="custom-wrapper">
               <div class="custom-box">
@@ -475,7 +486,9 @@
                   <span class="project-year">2025</span>
                 </p>
 
-                <h3 class="title is-4 mt-2 fancy">Ankjær Enterprise</h3>
+                <h3 class="title is-4 mt-2 uoverskift fancy">
+                  Ankjær Enterprise
+                </h3>
 
                 <p class="mb-4">Mit afsluttende eksamensprojekt MMD 2025</p>
 
@@ -500,7 +513,7 @@
                   <span class="project-year">2025</span>
                 </p>
 
-                <h3 class="title is-4 mt-2 fancy">
+                <h3 class="title is-4 uoverskift mt-2 fancy">
                   App til genbrug af byggematerialer
                 </h3>
 
@@ -527,7 +540,9 @@
                   <span class="project-year">2024</span>
                 </p>
 
-                <h3 class="title is-4 mt-2 fancy">Portfolio Website 2024</h3>
+                <h3 class="title is-4 mt-2 uoverskift fancy">
+                  Portfolio Website 2024
+                </h3>
 
                 <p class="mb-4">En af mine tidligere portfolio-løsninger.</p>
 
@@ -547,7 +562,7 @@
         <div class="box kontakt">
           <div class="columns is-vcentered">
             <div class="column">
-              <h2 class="title is-2 has-text-white">Kontakt mig</h2>
+              <h2 class="title is-2 has-text-white uoverskift">Kontakt mig</h2>
               <p>Lad os skabe noget sammen.</p>
             </div>
 
@@ -555,7 +570,15 @@
               <ul>
                 <li>Email: aviendahl@hotmail.dk</li>
                 <li>Tlf: 40112020</li>
-                <li>LinkedIn</li>
+                <li>
+                  <a
+                    class="has-text-white has-text-decoration-none"
+                    href="https://www.linkedin.com/in/alberte-viendahl-østergaard-andersen-20a08628a"
+                    target="_blank"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
